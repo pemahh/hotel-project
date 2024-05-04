@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif; 
+	text-align: center;
+}
+h1{
+color: darkgreen;
+}
+
+.light {
+	color:darkgreen;
+    font-weight: normal;
+}
+
+hr.dotted{
+border-top: 3px dotted darkgreen; 
+margin-top: 40px;
+width: 50%; 
+}
+
+p.lowercase {
+	color:darkgreen;
+    font-size: 24px; 
+    font-weight: bold; 
+    letter-spacing: 0.5em; 
+    }
+		
+p.uppercase {
+	color:darkgreen;
+    font-size: 24px; 
+    letter-spacing: 0.5em; 
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Adjust the font size for smaller screens */
+    }
+
+    .lowercase, .uppercase {
+        font-size: 18px; /* Adjust the font size for smaller screens */
+        letter-spacing: 0.2em; /* Adjust the letter spacing for smaller screens */
+    }
+}
