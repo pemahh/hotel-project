@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700 !important;
+    color: #092032;
+}
+
+a{
+    color: #092032;
+}
+
+
+
+.logo{
+    margin-left: 50px;
+}
+.bg-cover{
+    background-position: center !important ;
+    background-size: cover;
+    background-position: center;
+}
+
+.top-nav{
+    background-color: #ded5af;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow:hidden;
+}
+.top-nav p{
+    color: #024d27;
+    margin-bottom: 0;
+    display: inline-block;
+    margin-right: 16px;
+}
+.top-nav i,
+.top-nav span{
+    vertical-align: middle; /* to make icon in same line as text */
+    color: #024d27;
+}
+
+.navbar-brand {
+  width: 90px;
+}
+
+
+.social-links a{
+    width: 34px;
+    height: 34px;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    border-radius: 100px;
+    color: #024d27;
+}
+.social-links a:hover {
+    background-color: #ffffff;
+    color: #000000; 
+}
+
+/*Buttons*/
+.btn{
+    padding: 9px 24px;
+}
+
+.btn-brand{
+    background-color: #046836;
+    color: #ffffff;
+    border-color: #024d27;
+}
+
+.btn-brand:hover{
+    color: #ffffff;
+    background-color: #034e28;
+}
+
+
+.dotted-border-btn {
+    display: inline-block;
+    padding: 17px 70px;
+    border: 2px dotted #024d27; 
+    border-radius: 40px; 
+    text-decoration: none;
+    color: #024d27; 
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dotted-border-btn:hover {
+    background-color: #024b0d; 
+    color: #fff; 
+  }
+
+/*img*/
+.section1{
+    background-image: url('img/sec1.jpg');
+    
+}
+
+/* .checkin-checkout-card {
+  background-color: rgba(78, 139, 105, 0.8);
+  border-radius: 30px;
+  padding: 40px;
+  margin-top: -60px;
+  margin-bottom: 50px;
+}
+
+
+.checkin-checkout-card .form-control,
+        .checkin-checkout-card .btn {
+            height: 40px;
+            margin-right: ;
+        }
+
+        .checkin-checkout-card .row {
+            align-items: center;
+        } */
+
+/* .location-icon {
+    margin-top: 5px;
+    color: #333;  Icon color 
+  }
+  
+  .location-icon i {
+    margin-right: 5px;
+  } */
+
+
+  .card-img-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text readability */
+    padding: 20px;
+}
+
+.card-title, .card-text, .btn {
+    z-index: 1; /* Ensure text and button are above the overlay */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.btn {
+    font-size: 0.875rem;
+    padding: 10px 20px;
+}
+
+/* card */
+.card {
+    height: 400px; /* Adjust the height as needed */
+}
+
+.card-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.287);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/*Next section with round photos*/
+.section-bg {
+  background-color: #e9f5f0; /* Light green background */
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-member img:hover {
+  transform: scale(1.1);
+}
+
+.team-member img {
+  width: 180px;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s;
+ 
+}
+
+.team-member h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #024d27; /* Match this color with your design */
+}
+
+
+
+
+
+/*ABOUT US*/
+
+.about-content {
+  padding: 30px;
+}
+
+.about-content h2 {
+  color: #024d27; /* Match this color with your design */
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #024d27; /* Match this color with your design */
+  border-color: #024d27; /* Match this color with your design */
+}
+
+.btn-primary:hover {
+  background-color: #036635; /* Match this color with your design */
+  border-color: #036635; /* Match this color with your design */
+}
+
+
+/**/
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #024d27; /* Match this color with your design */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #666;
+}
+
+/*guest review*/
+.card-guest {
+  border: 1px solid #e1e1e1; /* Add a subtle border */
+  border-radius: 10px;
+}
+
+.blockquote-footer {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+/*Contact us*/
+
+/*Footer*/
+footer.bg-color {
+  background-color: #ded5af;; /* Dark background color */
+  color: #ffffff; /* Light text color */
+}
+
+footer a {
+  color: #ffffff; /* Ensure footer links are white */
+}
+
+footer .map-container {
+  margin-top: 20px;
+}
+
+footer .map {
+  width: 50%;
+  height: 200px;
+  border: 0;
+}
+
+footer .input-group {
+  max-width: 400px; /* Adjust as needed */
+}
+
+footer .btn-primary {
+  background-color: #024d27; /* Customize button color */
+  border: none; /* Remove border */
+}
+
+.footer-with-wave {
+  position: relative;
+  padding-top: 50px; /* Adjust this value to control the height of the wave */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23024d27" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+
+
+
