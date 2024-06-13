@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Card Layout</title>
+<style>
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Added padding for better spacing */
+    box-sizing: border-box;
+}
+
+.section {
+    text-align: center;
+    max-width: 600px;
+    opacity: 0; /* Initially hide section */
+    transform: translateY(50px); /* Move section down */
+    animation: fadeInUpSection 1s ease forwards; /* Animation to fade in and move up */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px; /* Adjust as needed */
+}
+
+.col {
+    position: relative;
+    flex-basis: calc(50% - 20px); /* Two columns in one row */
+    max-width: 450px; /* Larger cards */
+    margin: 10px;
+    overflow: hidden; /* Ensure the image doesn't overflow the card */
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center; /* Center align the content */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Added transition for hover effect */
+    opacity: 0; /* Initially hide content */
+    transform: translateY(50px); /* Move content down */
+    animation: fadeInUpCol 3s ease forwards; /* Animation to fade in and move up */
+}
+
+.col:hover {
+    transform: scale(1.05); /* Zoom on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure the image is behind the text */
+    transition: transform 0.5s ease; /* Added transition for hover effect */
+}
+
+.col:hover .image {
+    transform: scale(1.1); /* Zoom image on hover */
+}
+
+.content {
+    position: relative;
+    height: 250px;
+    z-index: 1; /* Ensure the text is above the image */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.col:hover .content {
+    opacity: 1; /* Show content on hover */
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8))
+}
+
+.content h2,
+.content p {
+    opacity: 0; /* Initially hide text */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.col:hover .content h2,
+.col:hover .content p {
+    opacity: 1; /* Show text on hover */
+}
+
+.col h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1; /* Ensure the h1 is above the image */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+    opacity: 1; /* Initially show h1 */
+}
+
+.col:hover h1 {
+    opacity: 0; /* Hide h1 on hover */
+}
+
+@media (max-width: 768px) {
+    .col {
+        flex-basis: 100%; /* Each column takes full width on smaller screens */
+    }
+}
+
+@keyframes fadeInUpSection {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUpCol {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="section">
+        <h1>Discover Your Next Escape!</h1>
+        <p>Your gateway to adventure awaits! Explore our curated collection of destinations and embark on unforgettable journeys. Let's turn your travel dreams into reality!</p>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <img src="img/aurora east.jpeg" alt="Card 1 Image" class="image">
+            <h1>AURORA EAST</h1>
+            <div class="content">
+                <h2>East Sikkim</h2>
+                <p>Experience the mesmerizing allure of East Sikkim, where the mystical charm of the Himalayas meets the vibrant culture of the region. Explore ancient monasteries nestled amidst rolling hills, stroll through quaint villages adorned with colorful prayer flags, and witness the breathtaking vistas of snow-capped peaks. From the bustling streets of Gangtok to the tranquil retreats of Tsomgo Lake, East Sikkim offers a perfect blend of adventure and serenity.</p>
+            </div>
+        </div>
+        
+        
+        <div class="col">
+            <img src="img/mystic west.jpeg" alt="Card 2 Image" class="image">
+            <h1>MYSTIC WEST</h1>
+            <div class="content">
+                <h2>West Sikkim</h2>
+                <p>Explore the mystical allure of West Sikkim, where lush greenery, cascading waterfalls, and serene monasteries await your discovery. Embark on scenic hikes to ancient temples, immerse yourself in the vibrant local culture, and rejuvenate your spirit amidst the breathtaking landscapes of this hidden gem.</p>
+            </div>
+        </div>
+        
+        <div class="col">
+            <img src="img/verdentsouth.jpeg" alt="Card 3 Image" class="image">
+            <h1>VERDANT SOUTH</h1>
+            <div class="content">
+                <h2>South Sikkim</h2>
+                <p>Immerse yourself in the lush landscapes and tranquil beauty of South Sikkim. From the emerald green valleys to the mist-covered hills, this region offers a serene escape from the hustle and bustle of city life. Explore ancient monasteries, embark on picturesque treks, and experience the rich biodiversity of this verdant paradise.</p>
+            </div>
+        </div>
+        
+        <div class="col">
+            <img src="img/zenith North.jpeg" alt="Card 4 Image" class="image">
+            <h1>ZENITH NORTH</h1>
+            <div class="content">
+                <h2>North Sikkim</h2>
+                <p>Embark on an unforgettable journey to North Sikkim, where snow-capped peaks, pristine lakes, and breathtaking landscapes await. Traverse rugged terrain, witness cascading waterfalls, and encounter the vibrant culture of the indigenous tribes. Whether you're seeking adventure or serenity, North Sikkim offers a truly immersive experience amidst the grandeur of the Himalayas.</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>
